@@ -1,0 +1,30 @@
+-
+	var services = [
+		{icon: 'icon-service-1.png', text: 'Представление интересов <br> Клиента в судебных спорах'},
+		{icon: 'icon-service-2.png', text: 'Представление интересов <br> Клиента в суде и прочих <br> организация'},
+		{icon: 'icon-service-3.png', text: 'Сопровождение <br> предпринимательской <br> деятельности Клиента'},
+		{icon: 'icon-service-4.png', text: 'Абонентское юридическое <br> обслуживание – комплексное <br> сопровождение бизнеса'},
+		{icon: 'icon-service-5.png', text: 'Юридическое сопровождение <br> организации и участия в торгах: <br> конкурсы и аукционы'},
+		{icon: 'icon-service-6.png', text: 'Юридическое <br> консультирование'},
+		{icon: 'icon-service-7.png', text: 'Международное частное <br> право'},
+		{icon: 'icon-service-8.png', text: 'Налоговая практика'},
+		{icon: 'icon-service-9.png', text: 'Банкротство'},
+		{icon: 'icon-service-10.png', text: 'Сопровождение сделок с недвижимостью, ценными бумагами, долями в уставном капитале обществ, в т.ч. с иностранным <br> элементом, сопровождение инвестиционной деятельности'}
+	]
+
+section.services#services 	
+	.services__box 
+		h2.services__title.section-title услуги
+		.services-choose 
+			.services-choose__buttons 
+				button.services-choose__button.services-choose__button--yur Услуги для юр. лиц
+				button.services-choose__button.services-choose__button--fiz Услуги для физ. лиц
+			.sercices-choose__contents 
+				.services-choose__content
+					each item in services 
+						article.service 
+							figure.service__icon
+								img(src="img/" + item.icon, alt="/")
+							p.service__text !{item.text}
+				.services-choose__content asdf
+

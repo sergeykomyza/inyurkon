@@ -1,0 +1,25 @@
+-
+    var menu = [
+        {linkText: 'О нас', link: '#home'},
+        {linkText: 'Услуги', link: '#services'},
+        {linkText: 'Новости', link: '#news'},
+        {linkText: 'Контакты', link: '#footer'}
+    ]
+
+header.header
+    .header__box
+        img.header__logo(src="img/logo.png")
+        nav.header-menu
+            ul.header-menu__list
+                each item in menu
+                    li.header-menu__item
+                        a.header-menu__link(href= item.link)= item.linkText
+        .header-phone
+            img.header-phone__icon(src="img/icon-phone.png")
+            .header-phone__numbers
+                span +7 (495) 916-19-25
+                span +7 (495) 725-33-11
+        .mobile
+            .header__burger.js-mmenuToggle 
+                i.fa-solid.fa-bars
+

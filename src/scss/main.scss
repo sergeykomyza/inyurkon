@@ -1,0 +1,101 @@
+@import 'blocks/fonts';
+@import 'blocks/vars';
+
+/* ===================================================================*/
+/* ====================================================== main styles */
+/*====================================================================*/
+
+:root{
+	--font-family-main: 'FuturaPT-Book', sans-serif;
+	--font-family-1: 'FuturaPT-Medium', sans-serif;
+	--font-family-2: 'FuturaPT-Bold', sans-serif;
+	--font-family-3: 'Montserrat-Regular', sans-serif;
+	--font-family-4: 'YesevaOne-Regular', sans-serif;
+	--color-main: #040562;
+	--color-2: #00014E;
+}
+
+*,
+p,
+span,
+h1,h2,h3,h4,h5,h6{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	overflow-x: hidden;
+}
+body{
+	font-family: var(--font-family-main);
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+button{
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:focus{
+		outline: none;
+	}
+}
+input{
+	outline: none;
+}
+
+section{
+	position: relative;
+}
+
+.mobile{
+	display: none;
+}
+
+.section-title{
+	font-family: var(--font-family-2);
+	font-size: 52px;
+	text-transform: uppercase;
+	@media(max-width: 992px){
+		font-size: 30px;
+	}
+}
+
+.compensate-for-scrollbar {
+	padding-right: 0 !important;
+}
+
+@media screen and ( max-width: 992px ){
+	.mobile{
+		display: block;
+	}
+	.desktop{
+		display: none;
+	}
+}
+
+/* ============================================================= TEMPLATES */
+@import 'blocks/templates';
+/* ============================================================= HEADER */
+@import 'blocks/header';
+/* ============================================================= SECTION */
+@import 'blocks/home';
+/* ============================================================= SECTION */
+@import 'blocks/services';
+/* ============================================================= SECTION */
+@import 'blocks/advantages';
+/* ============================================================= SECTION */
+@import 'blocks/feedback';
+/* ============================================================= SECTION */
+@import 'blocks/news';
+/* ============================================================= FOOTER */
+@import 'blocks/footer';

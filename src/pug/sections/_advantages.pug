@@ -1,0 +1,16 @@
+-
+	var advantages = [
+		{icon: 'icon-advantage-1.png', text: 'Многолетний <br> опыт'},
+		{icon: 'icon-advantage-2.png', text: 'Контроль <br>  качества'},
+		{icon: 'icon-advantage-3.png', text: 'Соблюдение <br>  сроков'},
+		{icon: 'icon-advantage-4.png', text: 'Высокая <br>  квалификация'}
+	]
+
+section.advantages#advantages 
+	img.section-logo(src="img/logo-section.png", alt="/")
+	h3.advantages__title.section-title преимущества компании
+	.advantages__box 
+		each item in advantages 
+			figure.advantage
+				img.advantage__icon(src="img/" + item.icon, alt="/")
+				figcaption.advantage__text !{item.text}

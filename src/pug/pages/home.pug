@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Site | Home
+	body
+		//- mixins
+		include ./../mixins/_mixin1.pug
+		include ./../mixins/_mixin2.pug
+		include ./../mixins/_mixin3.pug
+		include ./../mixins/_mixin4.pug
+		include ./../mixins/_mixin5.pug
+		// ======================================== HEADER
+		include ./../sections/_header.pug
+		.main-page
+			// ======================================== SECTION
+			include ./../sections/_home.pug
+			// ======================================== SECTION
+			include ./../sections/_services.pug
+			// ======================================== SECTION
+			include ./../sections/_advantages.pug
+			// ======================================== SECTION
+			include ./../sections/_feedback.pug
+			// ======================================== SECTION
+			include ./../sections/_news.pug
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug

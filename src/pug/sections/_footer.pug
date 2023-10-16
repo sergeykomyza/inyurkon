@@ -1,0 +1,41 @@
+footer.footer#footer 
+	.footer-contacts 
+		.footer-contacts__box 
+			img.footer-contacts__logo(src="img/logo-footer.png", alt="/")
+			a.footer-contacts__value(href="tel:+74959161925") +7 (495) 916-19-25 
+			a.footer-contacts__value(href="tel:+74959160143") +7 (495) 916-01-43 
+			a.footer-contacts__value(href="mail:secretary@inyurcon.ru") secretary@inyurcon.ru
+			p.footer-contacts__value 101000, г. Москва, #[br] улица Покровка 40Б, #[br] подъезд 3 
+			p.footer-contacts__value ОГРН: 1187746957265, #[br] ИНН: 7702475312, #[br] КПП: 774312345
+			
+	.footer-navigation
+		nav.footer-navigation__col 
+			h6.footer-navigation__title о компании
+			ul.footer-navigation__list 
+				each item in ['О группе', 'Руководство', 'Клиенты', 'Партнеры', 'Отзывы']
+					li.footer-navigation__item 
+						a.footer-navigation__link(href="/")= item 
+		nav.footer-navigation__col 
+			h6.footer-navigation__title юридическим лицам
+			ul.footer-navigation__list 
+				each item in ['Представление интересов Клиента в <br> судебных спорах','Представление интересов Клиента','Юридическое консультирование','Сопровождение сделок','Сопровождение <br> предпринимательской деятельности <br> Клиента','Налоговая практика','Банкротство','Юридическое сопровождение <br> организации и участия в торгах: <br> конкурсы и аукционы','Международное частное право','Абонентское юридическое']
+					li.footer-navigation__item 
+						a.footer-navigation__link(href="/") !{item}
+		nav.footer-navigation__col 
+			h6.footer-navigation__title физическим лицам
+			ul.footer-navigation__list 
+				each item in ['Представление интересов Клиента в <br> судах общей юрисдикции всех <br> инстанций','Недвижимость','Трудовое право','Семейное право','Наследственное право','Налоговое право','Защита прав потребителей']
+					li.footer-navigation__item 
+						a.footer-navigation__link(href="/") !{item}
+
+.subfooter 
+	.subfooter__box
+		span.subfooter__item © 2009—2022 Юридическая группа ИнЮрКон
+		.subfooter__links 
+			button.subfooter__item Информированное согласие
+			button.subfooter__item Согласие на обработку персональных данных
+		a.subfooter__dev(href="")
+			span.subfooter__item Разработка и продвижение сайта - 
+			img(src="img/scrum-logo.png", alt="/") 
+
+		
