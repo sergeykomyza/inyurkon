@@ -1,24 +1,13 @@
 
 // ================================================== ПРОКРУТКА, ШАПКА
 const headerLogic = ()=> {
-
-    $('.header-menu__link').click(function () {
-        var scroll_elem = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(scroll_elem).offset().top
-        }, 1000);
-        document.querySelector('.header-menu').classList.remove('active')
-    });
-
     const header = document.querySelector('.header')
-    
     function headerActiveToggle() {
         const scrollSize = window.pageYOffset
         scrollSize > 1 ? header.classList.add('active') : header.classList.remove('active')
     }
     window.addEventListener('load', headerActiveToggle) 
     window.addEventListener('scroll', headerActiveToggle) 
-
 }
 const mMenuToggle = ()=> {
     document.querySelector('.js-mmenuToggle').addEventListener('click', ()=>{
@@ -40,7 +29,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
     
     function showContent(i){
-      content[i].style.display = 'flex';
+      content[i].style.display = 'block';
       tab[i].classList.add(activeClass);
     }
     

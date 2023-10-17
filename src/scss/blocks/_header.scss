@@ -40,6 +40,13 @@
     }
 }
 
+body:not(.main-page){
+    padding-top: 80px;
+    .header{
+        background: var(--color-2); 
+    }
+}
+
 .header-menu{
     @media(max-width: 992px) {
         position: fixed;

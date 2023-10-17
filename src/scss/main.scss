@@ -13,6 +13,7 @@
 	--font-family-4: 'YesevaOne-Regular', sans-serif;
 	--color-main: #040562;
 	--color-2: #00014E;
+    --color-3: #060763;
 }
 
 *,
@@ -61,6 +62,21 @@ section{
 	display: none;
 }
 
+* ::-webkit-scrollbar {
+    width: 6px; /* ширина всей полосы прокрутки */
+  }
+  
+  * ::-webkit-scrollbar-track {
+    background: #DDD; /* цвет зоны отслеживания */
+    border-radius: 20px;
+  }
+  
+  * ::-webkit-scrollbar-thumb {
+    background-color: var(--color-3); /* цвет бегунка */
+    border-radius: 20px; /* округлось бегунка */
+    border: 3px solid transparent;
+  }
+
 .section-title{
 	font-family: var(--font-family-2);
 	font-size: 52px;
@@ -90,7 +106,7 @@ section{
 /* ============================================================= SECTION */
 @import 'blocks/home';
 /* ============================================================= SECTION */
-@import 'blocks/services';
+@import 'blocks/services2';
 /* ============================================================= SECTION */
 @import 'blocks/advantages';
 /* ============================================================= SECTION */

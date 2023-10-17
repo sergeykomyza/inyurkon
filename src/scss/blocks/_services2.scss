@@ -1,0 +1,95 @@
+.services{
+	padding: 91px 0 128px 0;
+	background: url('../img/new-services/services-bg.webp') center center/cover no-repeat;
+	&__title{
+		margin: 0 0 53px 0;
+		color: #212121;
+		text-align: center;
+	}
+	&__box{
+		@include boxWidth(1506px);
+	}
+}
+
+.services-choose{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__buttons{
+		display: flex;
+		border-radius: 50px;
+		border: 3px solid #060763;
+		margin: 0 0 72px 0;
+		overflow: hidden;
+	}
+	&__button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 301px;
+		height: 71px;
+		font-size: 28px;
+		color: #FFF;
+		background: #3e4e9c;
+		@media(max-width: 992px){
+			width: 150px;
+			height: 40px;
+			font-size: 16px;
+		}
+		&:hover{
+			background: #060763;
+		}
+		&.active{
+			background: #060763;
+		}
+	}
+	&__contents{
+        width: 100%;
+	}
+	&__mixed{
+        column-count: 3;
+        column-gap: 45px;
+        @media(max-width: 992px){
+            column-count: 1;
+        }
+	}
+}
+
+.service{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    break-inside: avoid;
+    margin-bottom: 20px;
+    padding: 32px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+
+    @media(max-width: 992px){
+        flex-direction: column;
+        padding: 15px;
+    }
+     
+    &__name{
+        margin-bottom: 10px;
+        font-family: var(--font-family-2);
+        font-size: 24px;
+        line-height: 27px;
+        color: var(--color-3);
+        @media(max-width: 992px){
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &__text{
+        font-size: 20px;
+        line-height: 1.2;
+        color: var(--color-3);
+        @media(max-width: 992px){
+            font-size: 16px;
+        }
+    }
+}
