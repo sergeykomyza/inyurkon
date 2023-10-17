@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- custom styles-->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Site | Page 3</title>
+    <title>InYurKon | Контакты</title>
   </head>
   <body>
+    <!-- ======================================== HEADER-->
     <header class="header">
       <div class="header__box"><a href="home.html"> <img class="header__logo" src="img/logo.png"/></a>
         <nav class="header-menu">
@@ -29,7 +30,7 @@
             <li class="header-menu__item"><a class="header-menu__link" href="#home">О нас</a></li>
             <li class="header-menu__item"><a class="header-menu__link" href="services.html">Услуги</a></li>
             <li class="header-menu__item"><a class="header-menu__link" href="news.html">Новости</a></li>
-            <li class="header-menu__item"><a class="header-menu__link" href="#footer">Контакты</a></li>
+            <li class="header-menu__item"><a class="header-menu__link" href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <div class="header-phone"><img class="header-phone__icon" src="img/icon-phone.png"/>
@@ -40,7 +41,39 @@
         </div>
       </div>
     </header>
-    <h1>Page 3</h1>
+    <!-- ======================================== SECTION-->
+    <section class="contacts"><img class="contacts__shadow" src="img/contacts-top-bg.png" alt="@"/>
+      <div class="contacts__box"> 
+        <h1 class="section-title contacts__title">контакты</h1>
+        <div class="contact"> 
+          <div class="contact__content"><img class="contact__logo" src="img/logo-contacts.png" alt="@"/>
+            <div class="contact__title">Главный офис Юридической Группы «ИнЮрКон» располагается по адресу:</div><span class="contact__val contact__val--adress">101000, г. Москва, улица Покровка 40Б, подъезд 3</span>
+            <div class="contact__row"> 
+              <div class="contact__item">
+                <div class="contact__title">Телефоны: </div><a class="contact__val contact__val--mb" href="tel:+74959161925">+7 (495) 916-19-25</a><a class="contact__val contact__val" href="tel:+74959160143">+7 (495) 916-01-43</a>
+              </div>
+              <div class="contact__item">
+                <div class="contact__title">e-mail: </div><a class="contact__val contacts__val--email" href="mailto:secretary@inyurcon.ru">secretary@inyurcon.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact__footer"><a class="button contact__button" href="">Адреса всех филиалов<img src="img/icon-button-arrow.png" alt="/"/></a></div>
+        </div>
+      </div>
+      <div class="contacts__map" id="map"></div>
+    </section>
+    <!-- ======================================== SECTION-->
+    <section class="feedback"> 
+      <div class="feedback__box"> 
+        <h4 class="feedback__title section-title"><img src="img/icon-email.png" alt="/"/>форма обратной связи</h4>
+        <form class="feedback__form form" action="#">
+          <input class="form__input" type="text" placeholder="Имя"/>
+          <input class="form__input js-maskPhone" type="text" placeholder="Телефон"/>
+          <button class="form__button">Отправить </button>
+        </form>
+      </div>
+    </section>
+    <!-- ======================================== FOOTER-->
     <footer class="footer" id="footer"> 
       <div class="footer-contacts"> 
         <div class="footer-contacts__box"> <img class="footer-contacts__logo" src="img/logo-footer.png" alt="/"/><a class="footer-contacts__value" href="tel:+74959161925">+7 (495) 916-19-25 </a><a class="footer-contacts__value" href="tel:+74959160143">+7 (495) 916-01-43 </a><a class="footer-contacts__value" href="mail:secretary@inyurcon.ru">secretary@inyurcon.ru</a>
@@ -96,6 +129,7 @@
         </div><a class="subfooter__dev" href=""><span class="subfooter__item">Разработка и продвижение сайта - </span><img src="img/scrum-logo.png" alt="/"/></a>
       </div>
     </div>
+    <!-- ======================================== SCRIPTS-->
     <!-- jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- fancybox -->

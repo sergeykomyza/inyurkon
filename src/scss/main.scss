@@ -16,6 +16,8 @@
     --color-3: #060763;
     --color-4: #313131;
     --color-5: #cdd1e4;
+    --color-6: #F3F3F3;
+    --color-7: #d0d0d0;
 }
 
 *,
@@ -61,10 +63,6 @@ section{
 	position: relative;
 }
 
-.mobile{
-	display: none;
-}
-
 * ::-webkit-scrollbar {
     width: 6px; /* ширина всей полосы прокрутки */
   }
@@ -93,6 +91,10 @@ section{
 	padding-right: 0 !important;
 }
 
+.mobile{
+	display: none;
+}
+
 @media screen and ( max-width: 992px ){
 	.mobile{
 		display: block;
@@ -100,6 +102,32 @@ section{
 	.desktop{
 		display: none;
 	}
+}
+
+.button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 9px 28px;
+    font-family: var(--font-family-2);
+    font-size: 18px;
+    color: var(--color-main);
+    background: #FFF;
+    border-radius: 30px;
+    border: 1px solid var(--color-7);
+    transition: background .3s;
+    img{
+        position: absolute;
+        right: 18px;
+        margin: 0 0 0 18px;
+    }
+    &:hover{
+        color: var(--color-main);
+        background: #ebe9e9;
+    }
 }
 
 /* ============================================================= TEMPLATES */
@@ -118,5 +146,7 @@ section{
 @import 'blocks/news';
 /* ============================================================= SECTION */
 @import 'blocks/new';
+/* ============================================================= SECTION */
+@import 'blocks/contacts';
 /* ============================================================= FOOTER */
 @import 'blocks/footer';

@@ -68,29 +68,7 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
-	&__button{
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		margin: 0 0 0 0;
-		padding: 8px 28px;
-		font-family: var(--font-family-2);
-		font-size: 18px;
-		color: var(--color-main);
-		background: #FFF;
-		border-radius: 30px;
-		transition: background .3s;
-		img{
-			position: absolute;
-			right: 18px;
-			margin: 0 0 0 18px;
-		}
-		&:hover{
-			background: #ebe9e9;
-		}
-	}
+	
 }
 
 .full-new{

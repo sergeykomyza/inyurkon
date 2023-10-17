@@ -115,13 +115,6 @@ const swiper = new Swiper('.swiper', {
     },
 });
 // ================================================== 
-// ================================================== 
-// ================================================== 
-// ================================================== 
-// ================================================== 
-// ================================================== 
-// ================================================== 
-// ================================================== 
 headerLogic()
 mMenuToggle()
 if (document.querySelector('.services')) {
@@ -135,11 +128,11 @@ document.addEventListener('DOMContentLoaded', function () {
         newScript.type = 'text/javascript';
         newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
         headID.appendChild(newScript);
-    }, 3000);
+    }, 500);
     setTimeout(function() {
             var myMap = new ymaps.Map("map", {
-            center: [55.917879, 37.806326],
-            zoom: 13,
+            center: [55.761147, 37.651259],
+            zoom: 16,
             controls: ['smallMapDefaultSet']
         }, {
             searchControlProvider: 'yandex#search'
@@ -152,9 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         myMap.geoObjects
             .add(myGeoObject)
-            .add(new ymaps.Placemark([55.917879, 37.806326], {
-                balloonContent: '<strong></strong>',
-                iconCaption: 'М.О., г. Королев, ул. Ленина 12'
+            .add(new ymaps.Placemark([55.761112, 37.652292], {
+                balloonContent: '<strong>101000, г. Москва, улица Покровка 40Б, подъезд 3</strong>',
+                iconCaption: 'Покровка 40Б'
             }, {
                 preset: 'islands#blueCircleDotIconWithCaption',
                 iconCaptionMaxWidth: '200'
@@ -168,6 +161,6 @@ document.addEventListener('DOMContentLoaded', function () {
             //... отключаем перетаскивание карты
             myMap.behaviors.disable('drag');
         }
-    }, 4000);
+    }, 1000);
 });
 
