@@ -4,13 +4,14 @@ include ./../mixins/_mixin1.pug
     var menu = [
         {linkText: 'О нас', link: '#home'},
         {linkText: 'Услуги', link: 'services.html'},
-        {linkText: 'Новости', link: '#news'},
+        {linkText: 'Новости', link: 'news.html'},
         {linkText: 'Контакты', link: '#footer'}
     ]
 
 header.header
     .header__box
-        img.header__logo(src="img/logo.png")
+        a(href="home.html") 
+            img.header__logo(src="img/logo.png")
         nav.header-menu
             ul.header-menu__list
                 each item in menu

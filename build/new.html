@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- custom styles-->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Site | Page 3</title>
+    <title>InYurKon | Новость</title>
   </head>
   <body>
+    <!-- ======================================== HEADER-->
     <header class="header">
       <div class="header__box"><a href="home.html"> <img class="header__logo" src="img/logo.png"/></a>
         <nav class="header-menu">
@@ -40,7 +41,36 @@
         </div>
       </div>
     </header>
-    <h1>Page 3</h1>
+    <!-- ======================================== SECTION-->
+    <section class="article"> 
+      <div class="article__box"> 
+        <div class="title-box">
+          <h1 class="section-title article__title">заголовок новости</h1><a class="allnews-button article__allnews" href="news.html">Все новости</a>
+        </div>
+        <article class="article__inner"><img class="article__foto" src="img/article-img.webp" alt="#"/>
+          <div class="article__content"> 
+            <p>Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст.</p>
+            <p>Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст.</p>
+            <p>Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Полный текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Краткий текст новости и общая информация о событии краткий текст.</p>
+            <div class="news-nav"><a class="news-nav__link" href="#">Пред. новость </a>
+              <div class="new-nav__div">| </div><a class="news-nav__link" href="#">След. новость </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ======================================== SECTION-->
+    <section class="feedback"> 
+      <div class="feedback__box"> 
+        <h4 class="feedback__title section-title"><img src="img/icon-email.png" alt="/"/>форма обратной связи</h4>
+        <form class="feedback__form form" action="#">
+          <input class="form__input" type="text" placeholder="Имя"/>
+          <input class="form__input js-maskPhone" type="text" placeholder="Телефон"/>
+          <button class="form__button">Отправить </button>
+        </form>
+      </div>
+    </section>
+    <!-- ======================================== FOOTER-->
     <footer class="footer" id="footer"> 
       <div class="footer-contacts"> 
         <div class="footer-contacts__box"> <img class="footer-contacts__logo" src="img/logo-footer.png" alt="/"/><a class="footer-contacts__value" href="tel:+74959161925">+7 (495) 916-19-25 </a><a class="footer-contacts__value" href="tel:+74959160143">+7 (495) 916-01-43 </a><a class="footer-contacts__value" href="mail:secretary@inyurcon.ru">secretary@inyurcon.ru</a>
@@ -96,6 +126,7 @@
         </div><a class="subfooter__dev" href=""><span class="subfooter__item">Разработка и продвижение сайта - </span><img src="img/scrum-logo.png" alt="/"/></a>
       </div>
     </div>
+    <!-- ======================================== SCRIPTS-->
     <!-- jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- fancybox -->

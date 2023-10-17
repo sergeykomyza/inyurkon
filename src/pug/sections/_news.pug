@@ -1,14 +1,14 @@
-section.news#news 
-	img.section-logo(src="img/logo-section-2.png", alt="/")
+section.news
+	if(mainPage === 1)
+		img.section-logo(src="img/logo-section-2.png", alt="/")
 	h5.news__title.section-title новости
 	.news__box 
 		each item, i in [1,2,3,4,5,6,7,8,9]
-			article.new.js-elem 
+			article.new 
 				time.new__date= `21.03.202${i}`
 				h6.new__title Заголовок новости Будет здесь и возможно здесь
 				p.new__text Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo similique illum voluptas veritatis aut rerum a maxime sint quo! Quam asperiores doloremque architecto praesentium quo earum assumenda quidem illum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque, voluptatum eum ipsa, error cupiditate quidem impedit aut ea omnis cum aliquid non possimus! Commodi explicabo earum unde facilis. Distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum placeat veniam voluptas repudiandae asperiores? Aut non nulla perspiciatis, magni deserunt numquam modi, excepturi provident quibusdam delectus culpa possimus labore. Eos?
-				a.button.new__button.js-openFullNew( href="#full-new" data-fancybox="") Подробнее
+				a.button.new__button( href="new.html") Подробнее
 					img(src="img/icon-button-arrow.png", alt="/") 
-	button.news__button.js-moreItems Все новости
-
-	#full-new.full-new
+	if(mainPage === 1)
+		a.allnews-button(href="news.html") Все новости

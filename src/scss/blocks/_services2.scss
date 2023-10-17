@@ -3,7 +3,7 @@
 	background: url('../img/new-services/services-bg.webp') center center/cover no-repeat;
 	&__title{
 		margin: 0 0 53px 0;
-		color: #212121;
+        color: var(--color-main);
 		text-align: center;
 	}
 	&__box{

@@ -14,6 +14,8 @@
 	--color-main: #040562;
 	--color-2: #00014E;
     --color-3: #060763;
+    --color-4: #313131;
+    --color-5: #cdd1e4;
 }
 
 *,
@@ -42,6 +44,7 @@ a{
 	}
 }
 button{
+    font-family: var(--font-family-main);
 	background: transparent;
 	border: none;
 	outline: none;
@@ -113,5 +116,7 @@ section{
 @import 'blocks/feedback';
 /* ============================================================= SECTION */
 @import 'blocks/news';
+/* ============================================================= SECTION */
+@import 'blocks/new';
 /* ============================================================= FOOTER */
 @import 'blocks/footer';

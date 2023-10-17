@@ -52,44 +52,6 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     showContent(0); 
     
 }
-  
-// ==================================================
-const cases = (parentSection) => {
-    let box = document.querySelector(parentSection),
-        items = box.querySelectorAll('.js-elem'),
-        btnMore = box.querySelector('.js-moreItems'),
-        showItem = 6,
-        k = 0
-    items.forEach(item => {
-        item.style.display = 'none'
-    })
-    const show = () => {
-        k += showItem
-        for (let i = 0; i < k; i++) {
-            i >= items.length - 1 || items.length <= showItem ? btnMore.style.display = 'none' : btnMore.style.display = 'flex'
-            if(i <= items.length-1){
-                items[i].style.display = 'block'
-            }
-        }
-    }
-    show()
-    btnMore.addEventListener('click', () => {
-        show()
-    })
-}
-
-// ==================================================
-const fullNew = () => {
-    const newModal = document.querySelector('.full-new')
-    const newsPreviews = document.querySelectorAll('.new')
-    newsPreviews.forEach(item => {
-        const newBtn = item.querySelector('.js-openFullNew')
-        const newTitle = item.querySelector('.new__title')
-        newBtn.addEventListener('click', function(){
-            newModal.innerHTML = item.innerHTML
-        })
-    })
-}
 
 // ==================================================\Fancybox
 Fancybox.bind("[data-fancybox]", {
@@ -162,9 +124,9 @@ const swiper = new Swiper('.swiper', {
 // ================================================== 
 headerLogic()
 mMenuToggle()
-tabs('.services-choose__buttons', '.services-choose__button', '.services-choose__content', 'active')
-cases('.news')
-fullNew()
+if (document.querySelector('.services')) {
+    tabs('.services-choose__buttons', '.services-choose__button', '.services-choose__content', 'active');
+}
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function() {
@@ -209,44 +171,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4000);
 });
 
-/* иногда карта не загружается таким образом (например в битриксе)
- тогда надо сделать обращение к ней как это указано в документации, через ymaps.ready - https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain
-
-ymaps.ready(init);
-
-function init(){
-
-    var myMap = new ymaps.Map("map", {
-        center: [56.745981, 37.179787],
-        zoom: 13,
-        controls: ['smallMapDefaultSet']
-    }, {
-        searchControlProvider: 'yandex#search'
-    });
-
-    myGeoObject = new ymaps.GeoObject({
-        geometry: {
-            type: "Point"
-        },
-    });
-    myMap.geoObjects
-        .add(myGeoObject)
-        .add(new ymaps.Placemark([56.745981, 37.179787], {
-            balloonContent: '<strong></strong>',
-            iconCaption: 'М.О., г. Королев, ул. Ленина 12'
-        }, {
-            preset: 'islands#blueCircleDotIconWithCaption',
-            iconCaptionMaxWidth: '200'
-        }));
-
-    myMap.setType('yandex#publicMap');
-    // отключаем масштабирование скроллом       
-    myMap.behaviors.disable('scrollZoom');
-    // на мобильных устройствах... (проверяем по userAgent браузера)
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        //... отключаем перетаскивание карты
-        myMap.behaviors.disable('drag');
-    }
-        
-}
-*/
