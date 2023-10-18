@@ -18,6 +18,7 @@
     --color-5: #cdd1e4;
     --color-6: #F3F3F3;
     --color-7: #d0d0d0;
+    --color-8: #EBEBEB;
 }
 
 *,
@@ -148,5 +149,7 @@ section{
 @import 'blocks/new';
 /* ============================================================= SECTION */
 @import 'blocks/contacts';
+/* ============================================================= SECTION */
+@import 'blocks/reviews';
 /* ============================================================= FOOTER */
 @import 'blocks/footer';

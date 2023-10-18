@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- custom styles-->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Site | Page 4</title>
+    <title>InYurKon | Отзывы</title>
   </head>
   <body>
+    <!-- ======================================== HEADER-->
     <header class="header">
       <div class="header__box"><a href="home.html"> <img class="header__logo" src="img/logo.png"/></a>
         <nav class="header-menu">
@@ -29,7 +30,7 @@
             <li class="header-menu__item"><a class="header-menu__link" href="#home">О нас</a></li>
             <li class="header-menu__item"><a class="header-menu__link" href="services.html">Услуги</a></li>
             <li class="header-menu__item"><a class="header-menu__link" href="news.html">Новости</a></li>
-            <li class="header-menu__item"><a class="header-menu__link" href="#footer">Контакты</a></li>
+            <li class="header-menu__item"><a class="header-menu__link" href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <div class="header-phone"><img class="header-phone__icon" src="img/icon-phone.png"/>
@@ -40,7 +41,26 @@
         </div>
       </div>
     </header>
-    <h1>Page 4</h1>
+    <!-- ======================================== SECTION-->
+    <section class="reviews">
+      <div class="reviews__box">
+        <h1 class="section-title reviews__title">Отзывы</h1>
+        <div class="reviews__wrap"><a class="review" href="img/review-1.png" data-fancybox="reviews"><img src="img/review-1.png" alt="@"/></a><a class="review" href="img/review-2.png" data-fancybox="reviews"><img src="img/review-2.png" alt="@"/></a><a class="review" href="img/review-3.png" data-fancybox="reviews"><img src="img/review-3.png" alt="@"/></a><a class="review" href="img/review-4.png" data-fancybox="reviews"><img src="img/review-4.png" alt="@"/></a>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== SECTION-->
+    <section class="feedback"> 
+      <div class="feedback__box"> 
+        <h4 class="feedback__title section-title"><img src="img/icon-email.png" alt="/"/>форма обратной связи</h4>
+        <form class="feedback__form form" action="#">
+          <input class="form__input" type="text" placeholder="Имя"/>
+          <input class="form__input js-maskPhone" type="text" placeholder="Телефон"/>
+          <button class="form__button">Отправить </button>
+        </form>
+      </div>
+    </section>
+    <!-- ======================================== FOOTER-->
     <footer class="footer" id="footer"> 
       <div class="footer-contacts"> 
         <div class="footer-contacts__box"> <img class="footer-contacts__logo" src="img/logo-footer.png" alt="/"/><a class="footer-contacts__value" href="tel:+74959161925">+7 (495) 916-19-25 </a><a class="footer-contacts__value" href="tel:+74959160143">+7 (495) 916-01-43 </a><a class="footer-contacts__value" href="mail:secretary@inyurcon.ru">secretary@inyurcon.ru</a>
@@ -96,6 +116,7 @@
         </div><a class="subfooter__dev" href=""><span class="subfooter__item">Разработка и продвижение сайта - </span><img src="img/scrum-logo.png" alt="/"/></a>
       </div>
     </div>
+    <!-- ======================================== SCRIPTS-->
     <!-- jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- fancybox -->

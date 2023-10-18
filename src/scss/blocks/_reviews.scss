@@ -1,0 +1,31 @@
+.reviews{
+
+    padding: 87px 0 152px 0;
+    background: var(--color-8);
+
+    &__box{
+        @include boxWidth(980px);
+    }
+
+    &__title{
+        margin: 0 0 94px 0;
+        text-align: center;
+        color: var(--color-main);
+    }
+
+    &__wrap{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+}
+
+.review{
+
+    img{
+        width: 100%;
+        object-fit: cover;  
+    }
+
+}

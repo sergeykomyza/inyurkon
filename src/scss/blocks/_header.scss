@@ -45,6 +45,9 @@ body:not(.main-page){
     .header{
         background: var(--color-3); 
     }
+    @media(max-width: 992px){
+        padding-top: 70px;
+    }
 }
 
 .header-menu{
