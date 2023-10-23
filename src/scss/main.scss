@@ -63,6 +63,11 @@ input{
 
 section{
 	position: relative;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.inner{
+
 }
 
 * ::-webkit-scrollbar {

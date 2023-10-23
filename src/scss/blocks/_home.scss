@@ -1,6 +1,8 @@
 .home{
 	padding: 200px 0 120px 0;
-	background: url('../img/bg-home.webp') center center/cover no-repeat;
+	background: 
+    linear-gradient(rgba(6, 7, 99, 0.5), rgba(6, 7, 99, 1)), 
+    url('../img/bg-home.webp') center center/cover no-repeat;
 	&__content{
 		@include boxWidth(1735px);
 	}

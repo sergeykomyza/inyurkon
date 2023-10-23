@@ -1,6 +1,6 @@
 .services{
 	padding: 91px 0 128px 0;
-	background: url('../img/new-services/services-bg.webp') center center/cover no-repeat;
+	background: url('../img/services-bg.webp') center center/cover no-repeat;
 	&__title{
 		margin: 0 0 53px 0;
         color: var(--color-main);
@@ -110,6 +110,7 @@
     &__icon{
         margin-bottom: 10px;
         height: 50px;
+        transition: all .3s;
     }
      
     &__name{
@@ -118,6 +119,7 @@
         font-size: 20px;
         line-height: 23px;
         color: var(--color-3);
+        transition: all .3s;
     }
 
     &__text{
@@ -141,6 +143,10 @@
         &:hover{
             z-index: 1;
             width: calc(200% + 15px);
+            .service__icon,
+            .service__name{
+                transform: scale(1.05);
+            }
             .service__text{
                 display: block;
                 overflow: visible;

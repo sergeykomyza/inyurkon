@@ -12,9 +12,12 @@ footer.footer#footer
 		nav.footer-navigation__col 
 			h6.footer-navigation__title о компании
 			ul.footer-navigation__list 
-				each item in ['О группе', 'Руководство', 'Клиенты', 'Партнеры', 'Отзывы']
+				each item in ['О нас', 'Команда', 'Отзывы']
 					li.footer-navigation__item 
-						a.footer-navigation__link(href="/")= item 
+						if(item === 'Отзывы')
+							a.footer-navigation__link(href="reviews.html")= item 
+						else 
+							a.footer-navigation__link(href="#")= item 
 		nav.footer-navigation__col 
 			h6.footer-navigation__title юридическим лицам
 			ul.footer-navigation__list 
