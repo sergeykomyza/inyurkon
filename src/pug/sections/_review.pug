@@ -1,7 +1,11 @@
 section.reviews
-    .reviews__box
-        h1.section-title.reviews__title Отзывы
-        .reviews__wrap
-            each item in ['review-1.png','review-2.png','review-3.png','review-4.png']
-                a.review(href="img/" + item data-fancybox="reviews")
-                    img(src="img/" + item, alt="@") 
+	.reviews__box
+		h1.section-title.reviews__title Отзывы
+		.reviews__slider 
+			.swiper.js-sliderReview
+				.swiper-wrapper
+					each item in ['review-1.png','review-2.png','review-3.png','review-4.png']
+						.swiper-slide
+							a.review(href="img/" + item data-fancybox="reviews")
+								img(src="img/" + item, alt="@") 
+				.swiper-pagination

@@ -76,26 +76,28 @@ const inputMask = () => {
 
 // ================================================== СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'vertical',
+    const swiper = new Swiper('.js-sliderReview', {
+        slidesPerView: 1, 
+        spaceBetween: 20,
         loop: true,
-    
-        // If we need pagination
+
         pagination: {
             el: '.swiper-pagination',
+            clickable: true
         },
     
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+        breakpoints: {
+            992: {
+                slidesPerView: 4
+            },
+            768: {
+                slidesPerView: 3
+            },
+            565: {
+                slidesPerView: 2
+            }
+        }
+
     });
 }
 
@@ -121,10 +123,7 @@ const parallax = (elem, startPos, marker)=> {
         }
     });
 }
-    
-parallax('.main-page .js-parallax1', "60% 50%", false)
-parallax('.main-page .js-parallax2', "40% 50%", false)
-parallax('.main-page .js-parallax3', "-20% 50%", false)
+
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {
     document.addEventListener('DOMContentLoaded', function () {
@@ -179,6 +178,10 @@ if (document.querySelector('.services')) {
     tabs('.services-choose__buttons', '.services-choose__button', '.services-choose__content', 'active');
 }
 fancybox()
+sliders()
+parallax('.main-page .js-parallax1', "60% 50%", false)
+parallax('.main-page .js-parallax2', "40% 50%", false)
+parallax('.main-page .js-parallax3', "-20% 50%", false)
 if(document.querySelector('#map')){
     map()
 }

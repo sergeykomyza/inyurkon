@@ -13,10 +13,16 @@
         color: var(--color-main);
     }
 
-    &__wrap{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
+    &__slider{
+        .swiper-wrapper{
+            margin-bottom: 30px;
+        }
+        .swiper-pagination{
+            position: static;
+            &-bullet{
+                background: var(--color-main);
+            }
+        }
     }
 
 }
