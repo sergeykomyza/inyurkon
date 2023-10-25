@@ -29,20 +29,21 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
     
     function showContent(i){
-      content[i].style.display = 'block';
-      tab[i].classList.add(activeClass);
+        content[i].style.display = 'block';
+        tab[i].classList.add(activeClass);
     }
     
     header.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = e.target;
-      if( target &&
-              (target.classList.contains(tabSelector.replace(/\./,"")) ||
-          target.parentNode.classList.contains(tabSelector.replace(/\./,"")))){
-              tab.forEach((item, i) => {
-                  if(target == item || target.parentNode == item){
-                      hideContent();
-                      showContent(i);
+        e.preventDefault();
+        const target = e.target;
+        if( target &&
+            (target.classList.contains(tabSelector.replace(/\./,"")) ||
+            target.parentNode.classList.contains(tabSelector.replace(/\./,"")))){
+                tab.forEach((item, i) => {
+                    if(target == item || target.parentNode == item){
+                        hideContent();
+                        showContent(i);
+                        services()
                   }
               });
           }
@@ -101,6 +102,18 @@ const sliders = () => {
     });
 }
 
+// ================================================== услуги
+const services = ()=> {
+    document.querySelectorAll('.service__inner').forEach( item => {
+        const wrap = item.closest('.service')
+        const wrapNext = wrap.nextElementSibling
+        if(wrapNext === true && wrapNext.scrollHeight >= wrap.scrollHeight){
+            wrap.style.minHeight = wrapNext.scrollHeight + 'px'
+        }
+        wrap.style.minHeight = item.scrollHeight + 'px'
+    })
+}
+
 // ================================================== parallax
 const parallax = (elem, startPos, marker)=> {
     gsap.to(elem, {
@@ -109,19 +122,48 @@ const parallax = (elem, startPos, marker)=> {
         scrollTrigger: {
             trigger: elem,
             start: startPos,
-            end: "+=1500",
+            end: "+=3500",
             scrub: true,
-            // snap: {
-            //     snapTo: 0.5, duration: 1, delay: 0.3, ease: 'back.out(1)'
-            // },
-            // markers: {
-            //     fontSize: '20px',
-            //     startColor: 'green',
-            //     endColor: 'red'
-            // },
             markers: marker
         }
     });
+}
+
+// ================================================== fixed block
+const fixedAnimation = ()=> {
+    if(document.documentElement.clientWidth > 992){
+        gsap.to('.advantages__box',{
+            marginTop: "-200px",
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".scroll-box",
+                start: "60% center",
+                end: `+=500`,
+                toggleActions: "restart none none reverse",
+                pin: ".scroll-box",
+                pinSpacing: true,
+                markers: false
+            }      
+        })
+    }
+    gsap.to('.js-num1',{
+        duration: 5, 
+        innerText:25, 
+        snap: "innerText",
+        scrollTrigger: {
+            trigger: ".scroll-box",
+            start: "60% center",
+            end: `+=500`,
+        } 
+    })
+    gsap.to('.js-num2',{
+        duration: 5, innerText:17, snap: "innerText",
+        scrollTrigger: {
+            trigger: ".scroll-box",
+            start: "60% center",
+            end: `+=500`,
+        } 
+    })
 }
 
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
@@ -179,9 +221,13 @@ if (document.querySelector('.services')) {
 }
 fancybox()
 sliders()
-parallax('.main-page .js-parallax1', "60% 50%", false)
-parallax('.main-page .js-parallax2', "40% 50%", false)
-parallax('.main-page .js-parallax3', "-20% 50%", false)
+services()
+fixedAnimation()
+if(document.documentElement.clientWidth > 992){
+    parallax('.main-page .js-parallax1', "800px 50%", false)
+    // parallax('.main-page .js-parallax2', "400px 50%", false)
+    // parallax('.main-page .js-parallax3', "100px 50%", false)
+}
 if(document.querySelector('#map')){
     map()
 }

@@ -6,11 +6,19 @@
 		{icon: 'icon-advantage-4.png', text: 'Высокая <br>  квалификация'}
 	]
 
-section.advantages#advantages 
+section.advantages.js-animate
 	img.section-logo(src="img/logo-section.png", alt="/")
 	h3.advantages__title.section-title преимущества компании
-	.advantages__box 
-		each item in advantages 
-			figure.advantage
-				img.advantage__icon(src="img/" + item.icon, alt="/")
-				figcaption.advantage__text !{item.text}
+	.advantages__inner
+		.advantages__box 
+			each item in advantages 
+				figure.advantage
+					img.advantage__icon(src="img/" + item.icon, alt="/")
+					figcaption.advantage__text !{item.text}
+		.advantages__counts 
+			.advantage 
+				.advantage__count.js-num1 0
+				span.advantage__text лет оказания #[br] юридических услуг
+			.advantage 
+				.advantage__count.js-num2 0
+				span.advantage__text лет средний стаж #[br] юридической практики команды

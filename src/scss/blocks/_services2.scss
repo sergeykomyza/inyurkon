@@ -63,12 +63,10 @@
 }
 
 .service{
-    
     position: relative;
-    min-height: 285px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-
+    
     &__inner{
         position: absolute;
         display: flex;
@@ -140,16 +138,18 @@
     }
 
     &__inner{
-        &:hover{
-            z-index: 1;
-            width: calc(200% + 15px);
-            .service__icon,
-            .service__name{
-                transform: scale(1.05);
-            }
-            .service__text{
-                display: block;
-                overflow: visible;
+        @media(min-width: 992px){
+            &:hover{
+                z-index: 1;
+                width: calc(200% + 15px);
+                .service__icon,
+                .service__name{
+                    transform: scale(1.05);
+                }
+                .service__text{
+                    display: block;
+                    overflow: visible;
+                }
             }
         }
     }

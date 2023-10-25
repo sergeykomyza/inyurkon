@@ -1,22 +1,34 @@
 .advantages{
-	padding: 96px 0 98px 0;
+    padding: 96px 0 98px 0;
 	background: url('../img/bg-advantages.webp') center center/cover no-repeat;
-	&__title{
-		margin: 0 0 100px 0;
+    
+    &__title{
+        margin: 0 0 100px 0;
 		color: #FFF;
 		text-align: center;
 		@media(max-width: 992px){
-			margin: 0 0 30px 0;
+            margin: 0 0 30px 0;
 		}
 	}
+
+    &__inner{
+        height: 200px;
+        overflow: hidden;
+        @media(max-width: 992px){
+            height: auto;
+        }
+    }
+
 	&__box{
 		@include boxWidth(1530px);
 		display: flex;
 		justify-content: space-between;
+        margin-bottom: 30px;
 		@media(max-width: 992px){
 			flex-wrap: wrap;
 		}
 	}
+
 	&__logo{
 		display: flex;
 		align-items: center;
@@ -24,15 +36,28 @@
 		background: #1e1f7b;
 		border-radius: 50%;
 	}
+
+    &__counts{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        text-align: center;
+        @media(max-width: 992px){
+            gap: 30px;
+        }
+    }
+
 }
 
 .advantage{
 	text-align: center;
-	@media(max-width: 992px){
+	
+    @media(max-width: 992px){
 		width: 50%;
 		margin: 0 0 30px 0;
 	}
-	&__icon{
+	
+    &__icon{
 		margin: 0 0 28px 0;
 		@media(max-width: 992px){
 			margin: 0 0 27px 0;
@@ -41,15 +66,23 @@
 			object-fit: contain;
 		}
 	}
-	&__text{
+	
+    &__text{
+        display: block;
 		font-family: var(--font-family-1);
 		font-size: 27px;
 		color: #FFF;
-		line-height: .7;
+		line-height: 1;
 		@media(max-width: 992px){
 			font-size: 18px;
 		}
 	}
+
+    &__count{
+        font-family: var(--font-family-2);
+        font-size: 70px;
+        color: #FFF;
+    }
 }
 
 .section-logo{
