@@ -20,7 +20,7 @@
     }
 
 	&__box{
-		@include boxWidth(1530px);
+		@include boxWidth(1200px);
 		display: flex;
 		justify-content: space-between;
         margin-bottom: 30px;
@@ -58,19 +58,19 @@
 	}
 	
     &__icon{
+        width: 100px;
+        height: 65px;
+        object-fit: contain;
 		margin: 0 0 28px 0;
 		@media(max-width: 992px){
-			margin: 0 0 27px 0;
-			width: 100px;
-			height: 65px;
-			object-fit: contain;
+			
 		}
 	}
 	
     &__text{
         display: block;
 		font-family: var(--font-family-1);
-		font-size: 27px;
+		font-size: 21px;
 		color: #FFF;
 		line-height: 1;
 		@media(max-width: 992px){
@@ -80,7 +80,7 @@
 
     &__count{
         font-family: var(--font-family-2);
-        font-size: 70px;
+        font-size: 60px;
         color: #FFF;
     }
 }

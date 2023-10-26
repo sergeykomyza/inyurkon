@@ -7,7 +7,7 @@
     padding: 9px 0;
     transition: all .3s;
     &__box{
-        @include boxWidth(1735px);
+        @include boxWidth(1200px);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -15,8 +15,9 @@
     &__logo{
         position: relative;
         z-index: 101;
+        width: 200px;
         @media(max-width: 1200px){
-            width: 160px;
+            width: 180px;
         }
     }
     &__burger{
@@ -79,7 +80,7 @@ body:not(.main-page){
     &__link{
         display: inline-block;
         padding: 10px 30px;
-        font-size: 28px;
+        font-size: 18px;
         color: #FFF;
         border-radius: 30px;
         &:hover{
@@ -89,7 +90,6 @@ body:not(.main-page){
         }
         @media(max-width: 1200px){
             padding: 10px 20px;
-            font-size: 24px;
         }
     }
 }
@@ -115,12 +115,12 @@ body:not(.main-page){
         display: flex;
         flex-direction: column;
         span{
-            font-size: 20px;
+            font-size: 16px;
             font-family: var(--font-family-2);
             color: #FFF;
             line-height: 1.2;
             @media(max-width: 1200px){
-                font-size: 17px;
+                font-size: 14px;
             }
         }
         @media(max-width: 992px){

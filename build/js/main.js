@@ -154,6 +154,7 @@ const fixedAnimation = ()=> {
             trigger: ".scroll-box",
             start: "60% center",
             end: `+=500`,
+            toggleActions: "restart none none reverse",
         } 
     })
     gsap.to('.js-num2',{
@@ -162,6 +163,7 @@ const fixedAnimation = ()=> {
             trigger: ".scroll-box",
             start: "60% center",
             end: `+=500`,
+            toggleActions: "restart none none reverse",
         } 
     })
 }

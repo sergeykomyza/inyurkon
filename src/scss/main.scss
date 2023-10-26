@@ -72,22 +72,22 @@ section{
 
 * ::-webkit-scrollbar {
     width: 6px; /* ширина всей полосы прокрутки */
-  }
-  
-  * ::-webkit-scrollbar-track {
+}
+
+* ::-webkit-scrollbar-track {
     background: #DDD; /* цвет зоны отслеживания */
     border-radius: 20px;
-  }
-  
-  * ::-webkit-scrollbar-thumb {
+}
+
+* ::-webkit-scrollbar-thumb {
     background-color: var(--color-3); /* цвет бегунка */
     border-radius: 20px; /* округлось бегунка */
     border: 3px solid transparent;
-  }
+}
 
 .section-title{
 	font-family: var(--font-family-2);
-	font-size: 52px;
+	font-size: 38px;
 	text-transform: uppercase;
 	@media(max-width: 992px){
 		font-size: 30px;

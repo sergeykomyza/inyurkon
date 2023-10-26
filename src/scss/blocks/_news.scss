@@ -1,11 +1,17 @@
 .news{
-	padding: 87px 0 152px 0;
+	padding-top: 90px;
+    padding-bottom: 150px;
 	background: url('../img/bg-news.webp') center center/cover no-repeat;
+
+    @media(max-width: 992px){
+        padding-bottom: 50px;
+    }
+
 	&__box{
-		@include boxWidth(1345px);
+		@include boxWidth(1200px);
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: 124px 177px;
+		gap: 0 100px;
         margin-bottom: 142px;
 		@media(max-width: 1200px){
 			gap: 50px 30px;
@@ -13,6 +19,7 @@
 		@media(max-width: 992px){
 			grid-template-columns: 1fr;
 			gap: 30px;
+            margin-bottom: 50px;
 		}
 	}
 	&__title{
@@ -21,6 +28,7 @@
 		text-align: center;
 	}
 }
+
 .allnews-button{
     display: flex;
     align-items: center;

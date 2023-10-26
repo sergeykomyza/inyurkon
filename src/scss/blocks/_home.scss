@@ -3,36 +3,41 @@
 	background: 
     linear-gradient(rgba(6, 7, 99, 0.5), rgba(6, 7, 99, 1)), 
     url('../img/bg-home.webp') center center/cover no-repeat;
-	&__content{
-		@include boxWidth(1735px);
+    
+    &__content{
+        @include boxWidth(1200px);
 	}
-	&__name{
 
-	}
+    &__name{
+        margin-bottom: 30px;
+    }
+	
 	&__title{
 		margin: 0 0 24px 0;
 		font-family: var(--font-family-4);
-		font-size: 54px;
+		font-size: 34px;
 		color: #FFF;
 		text-transform: uppercase;
 		@media(max-width: 992px){
-			font-size: 35px;
+			font-size: 32px;
 			br{
 				display: none;
 			}
 		}
 	}
-	&__tagtitle{
+	
+    &__tagtitle{
 		font-size: 25px;
 		color: #FFF;
 		@media(max-width: 992px){
 			font-size: 18px;
 		}
 	}
-	&__info{
+	
+    &__info{
 		max-width: 840px;
 		width: 100%;
-		margin: -37px 0 0 auto;
+		margin: 0px 0 0 auto;
 		text-align: right;
 		
 		@media(max-width: 1500px){
@@ -42,16 +47,18 @@
 			text-align: left;
 		}
 	}
-	&__text{
+	
+    &__text{
 		margin: 0 0 30px 0;
-		font-size: 25px;
+		font-size: 18px;
 		color: #FFF;
 		line-height: 1.2;
 		@media(max-width: 992px){
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
-	&__button{
+	
+    &__button{
 		display: flex;
 		align-items: center;
 		justify-content: center;
