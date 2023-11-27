@@ -3,12 +3,32 @@ section.news
 		img.section-logo(src="img/logo-section-2.png", alt="/")
 	h5.news__title.section-title новости
 	.news__box 
-		each item, i in [1,2,3]
-			article.new 
-				time.new__date= `21.03.202${i}`
-				h6.new__title Заголовок новости Будет здесь и возможно здесь
-				p.new__text Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo similique illum voluptas veritatis aut rerum a maxime sint quo! Quam asperiores doloremque architecto praesentium quo earum assumenda quidem illum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque, voluptatum eum ipsa, error cupiditate quidem impedit aut ea omnis cum aliquid non possimus! Commodi explicabo earum unde facilis. Distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum placeat veniam voluptas repudiandae asperiores? Aut non nulla perspiciatis, magni deserunt numquam modi, excepturi provident quibusdam delectus culpa possimus labore. Eos?
-				a.button.new__button( href="new.html") Подробнее
-					img(src="img/icon-button-arrow.png", alt="/") 
+		if(mainPage === 1)
+			each item, i in [1,2,3]
+				article.new 
+					time.new__date= `21.03.202${i}`
+					img.new__foto(src="img/article-img.png", alt="@")
+					h6.new__title Заголовок новости Будет здесь и возможно здесь
+					p.new__text Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo similique illum voluptas veritatis aut rerum a maxime sint quo! Quam asperiores doloremque architecto praesentium quo earum assumenda quidem illum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque, voluptatum eum ipsa, error cupiditate quidem impedit aut ea omnis cum aliquid non possimus! Commodi explicabo earum unde facilis. Distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum placeat veniam voluptas repudiandae asperiores? Aut non nulla perspiciatis, magni deserunt numquam modi, excepturi provident quibusdam delectus culpa possimus labore. Eos?
+					a.button.new__button( href="new.html") Подробнее
+						img(src="img/icon-button-arrow.png", alt="/") 
+		else 
+			each item, i in [1,2,3,4,5,6]
+				article.new 
+					time.new__date= `21.03.202${i}`
+					img.new__foto(src="img/article-img.png", alt="@")
+					h6.new__title Заголовок новости Будет здесь и возможно здесь
+					p.new__text Краткий текст новости и общая информация о событии краткий текст. Текст новости и общая информация. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo similique illum voluptas veritatis aut rerum a maxime sint quo! Quam asperiores doloremque architecto praesentium quo earum assumenda quidem illum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque, voluptatum eum ipsa, error cupiditate quidem impedit aut ea omnis cum aliquid non possimus! Commodi explicabo earum unde facilis. Distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum placeat veniam voluptas repudiandae asperiores? Aut non nulla perspiciatis, magni deserunt numquam modi, excepturi provident quibusdam delectus culpa possimus labore. Eos?
+					a.button.new__button( href="new.html") Подробнее
+						img(src="img/icon-button-arrow.png", alt="/") 
 	if(mainPage === 1)
 		a.allnews-button(href="news.html") Все новости
+	else 
+		.news-pagination 
+			button.news-pagination__btn.news-pagination__btn--prev 
+				img(src="img/icon-button-arrow.png", alt="/")
+			button.news-pagination__btn 1
+			button.news-pagination__btn 2
+			button.news-pagination__btn 3
+			button.news-pagination__btn.news-pagination__btn--next
+				img(src="img/icon-button-arrow.png", alt="/")

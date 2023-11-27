@@ -106,11 +106,13 @@ const sliders = () => {
 const services = ()=> {
     document.querySelectorAll('.service__inner').forEach( item => {
         const wrap = item.closest('.service')
-        const wrapNext = wrap.nextElementSibling
-        if(wrapNext === true && wrapNext.scrollHeight >= wrap.scrollHeight){
-            wrap.style.minHeight = wrapNext.scrollHeight + 'px'
+        if(item === true && item.scrollHeight >= wrap.scrollHeight){
+            wrap.style.minHeight = item.scrollHeight + 'px'
         }
         wrap.style.minHeight = item.scrollHeight + 'px'
+        item.addEventListener('mouseover', function(){
+            item.querySelector('.service__text').classList.add('animate__bounceIn')
+        })
     })
 }
 
@@ -134,7 +136,7 @@ const fixedAnimation = ()=> {
     if(document.documentElement.clientWidth > 992){
         gsap.to('.advantages__box',{
             marginTop: "-200px",
-            duration: 2,
+            duration: 1,
             scrollTrigger: {
                 trigger: ".scroll-box",
                 start: "60% center",

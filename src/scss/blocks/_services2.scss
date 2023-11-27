@@ -126,7 +126,8 @@
         line-height: 1.2;
         color: var(--color-3);
         -webkit-line-clamp: 3; 
-        display: -webkit-box; 
+        display: none;
+        // display: -webkit-box; 
         -webkit-box-orient: vertical;
         overflow: hidden;
 
