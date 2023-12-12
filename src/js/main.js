@@ -140,7 +140,7 @@ const fixedAnimation = ()=> {
             scrollTrigger: {
                 trigger: ".scroll-box",
                 start: "60% center",
-                end: `+=500`,
+                end: `+=10`,
                 toggleActions: "restart none none reverse",
                 pin: ".scroll-box",
                 pinSpacing: true,
