@@ -159,7 +159,7 @@ const fixedAnimation = ()=> {
             toggleActions: "restart none none reverse",
         } 
     })
-    gsap.to('.js-num2',{
+    gsap.to('.js-num2', {
         duration: 2, innerText:17, snap: "innerText",
         scrollTrigger: {
             trigger: ".scroll-box",
@@ -169,6 +169,24 @@ const fixedAnimation = ()=> {
         } 
     })
 }
+
+// ================================================== 
+
+// const scrollBoxHeight = document.querySelector('.team__scroll').scrollHeight
+// gsap.to('.team__scroll',{
+//     transform: `translateY(-${scrollBoxHeight}px)`,
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: ".team",
+//         start: "0 top",
+//         end: `+=100`,
+//         toggleActions: "restart none none reverse",
+//         pin: ".team",
+//         scrub: 5,
+//         pinSpacing: true,
+//         markers: true
+//     }      
+// })
 
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {

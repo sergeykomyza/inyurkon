@@ -1,0 +1,111 @@
+.team{
+
+  padding-top: 134px;
+  padding-bottom: 130px;
+    
+  &-page{
+    background: var(--color-10);
+  }
+
+  &__box{
+    @include boxWidth(1740px);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__titlebox{
+    position: fixed;
+    z-index: 2;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding-top: 130px;
+    overflow: hidden;
+  }
+
+  &__titlebg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__title{
+    margin-bottom: 35px;
+    font-family: var(--font-family-4);
+    font-size: 54px;
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    @media(max-width: 992px){
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+  }
+
+  &-bg{
+    position: fixed;
+    z-index: -1;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+
+  &__scrollbox{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__scroll{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+  }
+
+}
+
+.preview-persona{
+
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+
+  @media(max-width: 992px){
+    max-width: 100%;
+  }
+
+  &__foto{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    margin-bottom: 27px;
+    border-radius: 5px;
+    filter: grayscale(1);
+    transition: all .3s;
+    &:hover{
+      filter: grayscale(0);
+    }
+  }
+
+  &__fio{
+    margin-bottom: 20px;
+    font-family: var(--font-family-4);
+    font-size: 24px;
+    color: #FFF;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__status{
+    font-size: 25px;
+    color: #FFF;
+  }
+
+}

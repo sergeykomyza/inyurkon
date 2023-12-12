@@ -19,6 +19,8 @@
     --color-6: #F3F3F3;
     --color-7: #d0d0d0;
     --color-8: #EBEBEB;
+		--color-9: #6096ed;
+		--color-10: #000164;
 }
 
 *,
@@ -94,6 +96,24 @@ section{
 	}
 }
 
+.line-title{
+	display: flex;
+	align-items: flex-end;
+	gap: 47px;
+	margin-bottom: 58px;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: #FFF;
+	&:after{
+		content: '';
+		display: flex;
+		width: 100%;
+		height: 1px;
+		background: var(--color-9);
+		transform: translateY(-13px);
+	}
+}
+
 .compensate-for-scrollbar {
 	padding-right: 0 !important;
 }
@@ -157,5 +177,7 @@ section{
 @import 'blocks/contacts';
 /* ============================================================= SECTION */
 @import 'blocks/reviews';
+/* ============================================================= SECTION */
+@import 'blocks/team';
 /* ============================================================= FOOTER */
 @import 'blocks/footer';
