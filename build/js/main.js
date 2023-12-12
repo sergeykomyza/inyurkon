@@ -149,7 +149,7 @@ const fixedAnimation = ()=> {
         })
     }
     gsap.to('.js-num1',{
-        duration: 5, 
+        duration: 2, 
         innerText:25, 
         snap: "innerText",
         scrollTrigger: {
@@ -160,7 +160,7 @@ const fixedAnimation = ()=> {
         } 
     })
     gsap.to('.js-num2',{
-        duration: 5, innerText:17, snap: "innerText",
+        duration: 2, innerText:17, snap: "innerText",
         scrollTrigger: {
             trigger: ".scroll-box",
             start: "60% center",
