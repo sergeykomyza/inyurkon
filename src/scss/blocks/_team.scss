@@ -36,6 +36,9 @@
     font-size: 54px;
     color: #FFF;
     text-transform: uppercase;
+    @media(max-width: 992px){
+      font-size: 30px;
+    }
   }
 
   &__items{

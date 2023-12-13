@@ -21,6 +21,7 @@
     --color-8: #EBEBEB;
 		--color-9: #6096ed;
 		--color-10: #000164;
+		--color-11: #D2D2D2;
 }
 
 *,
@@ -36,7 +37,6 @@ html{
 }
 body{
 	font-family: var(--font-family-main);
-    // zoom: 0.8;
 }
 ul{
 	margin: 0;
@@ -68,9 +68,6 @@ section{
     transform: translate3d(0px, 0px, 0px);
 }
 
-.inner{
-
-}
 
 * ::-webkit-scrollbar {
     width: 6px; /* ширина всей полосы прокрутки */
@@ -179,5 +176,7 @@ section{
 @import 'blocks/reviews';
 /* ============================================================= SECTION */
 @import 'blocks/team';
+/* ============================================================= SECTION */
+@import 'blocks/persona';
 /* ============================================================= FOOTER */
 @import 'blocks/footer';
