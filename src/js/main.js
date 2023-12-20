@@ -111,7 +111,6 @@ const services = ()=> {
         }
         wrap.style.minHeight = item.scrollHeight + 'px'
         item.addEventListener('mouseover', function(){
-            item.querySelector('.service__text').classList.add('animate__bounceIn')
         })
     })
 }
@@ -172,21 +171,21 @@ const fixedAnimation = ()=> {
 
 // ================================================== 
 
-// const scrollBoxHeight = document.querySelector('.team__scroll').scrollHeight
-// gsap.to('.team__scroll',{
-//     transform: `translateY(-${scrollBoxHeight}px)`,
-//     duration: 1,
-//     scrollTrigger: {
-//         trigger: ".team",
-//         start: "0 top",
-//         end: `+=100`,
-//         toggleActions: "restart none none reverse",
-//         pin: ".team",
-//         scrub: 5,
-//         pinSpacing: true,
-//         markers: true
-//     }      
-// })
+const scrollBoxHeight = document.querySelector('.team__items').scrollHeight
+gsap.to('.team__items',{
+    transform: `translateY(-${scrollBoxHeight}px)`,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".line-title",
+        start: "0 200px",
+        end: `+=${scrollBoxHeight}`,
+        toggleActions: "restart none none reverse",
+        pin: ".team",
+        scrub: 1,
+        pinSpacing: false,
+        markers: true
+    }      
+})
 
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {

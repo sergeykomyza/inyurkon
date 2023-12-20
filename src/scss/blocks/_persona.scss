@@ -18,12 +18,12 @@
   }
 
   &__box{
-    @include boxWidth(1740px);
+    @include boxWidth(1200px);
   }
   
   &__inner{
     display: grid;
-    grid-template-columns: 1fr 0.545fr;
+    grid-template-columns: 1fr 1.145fr;
     gap: 95px;
     @media(max-width: 992px){
       grid-template-columns: 1fr;

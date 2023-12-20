@@ -3,40 +3,40 @@
     {category: 'партнеры', items: [
       {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
       {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'}
-    ]},
-    {category: 'адвокаты', items: [
-      {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
       {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
       {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
       {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
     ]},
-    {category: 'юристы', items: [
-      {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
-    ]},
-    {category: 'менеджмент', items: [
-      {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
-      {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
-    ]},
+    //- {category: 'адвокаты', items: [
+    //-   {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //- ]},
+    //- {category: 'юристы', items: [
+    //-   {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Елена Владимировна', status: 'Партнер'},
+    //- ]},
+    //- {category: 'менеджмент', items: [
+    //-   {foto: 'foto.png', fio: 'Жирнов Валерий Владимирович', status: 'Адвокат, Партнер'},
+    //-   {foto: 'foto.png', fio: 'Степанюк Роман Владимирович', status: 'Адвокат, Партнер'},
+    //- ]},
   ]
 
 section.team 
-  
+  h1.section-title.team__title команда
   .team__box
-    .team__scrollbox 
-      .team__scroll
-        each item in team
-            .team__inner
-              h2.line-title= item.category
-              .team__items 
-                each elem in item.items 
-                  a.preview-persona(href="persona.html") 
-                    img.preview-persona__foto(src="img/" + elem.foto, alt="@")
-                    .preview-persona__fio= elem.fio
-                    .preview-persona__status= elem.status
+    each item in team
+      h2.line-title= item.category
+      .team__inner
+        .team__items 
+          each elem in item.items 
+            a.preview-persona(href="persona.html") 
+              img.preview-persona__foto(src="img/" + elem.foto, alt="@")
+              .preview-persona__fio= elem.fio
+              .preview-persona__status= elem.status

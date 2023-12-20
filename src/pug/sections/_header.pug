@@ -19,10 +19,11 @@ header.header
                     li.header-menu__item
                         a.header-menu__link(href= item.link)= item.linkText
         .header-phone
-            img.header-phone__icon(src="img/icon-phone.png")
+            a(href="tel:+74959161925")
+                img.header-phone__icon(src="img/icon-phone.png")
             .header-phone__numbers
-                span +7 (495) 916-19-25
-                span +7 (495) 725-33-11
+                a(href="tel:+74959161925") +7 (495) 916-19-25
+                a(href="tel:+74957253311") +7 (495) 725-33-11
         .mobile
             .header__burger.js-mmenuToggle 
                 i.fa-solid.fa-bars

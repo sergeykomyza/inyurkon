@@ -1,8 +1,8 @@
 .team{
 
-  padding-top: 134px;
-  padding-bottom: 130px;
-    
+  padding-top: 130px;
+  padding-bottom: 80px;
+  
   &-page{
     background: var(--color-10);
   }
@@ -12,7 +12,7 @@
     position: relative;
     z-index: 1;
   }
-
+  
   &__titlebox{
     position: fixed;
     z-index: 2;
@@ -34,6 +34,11 @@
     margin-bottom: 35px;
     color: #FFF;
     text-align: center;
+  }
+
+  &__inner{
+    margin-bottom: 50px;
+    overflow: hidden;
   }
 
   &__items{

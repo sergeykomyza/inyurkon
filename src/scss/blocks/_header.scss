@@ -114,7 +114,7 @@ body:not(.main-page){
     &__numbers{
         display: flex;
         flex-direction: column;
-        span{
+        a{
             font-size: 16px;
             font-family: var(--font-family-2);
             color: #FFF;

@@ -94,6 +94,8 @@ section{
 }
 
 .line-title{
+	position: relative;
+	z-index: 3;
 	display: flex;
 	align-items: flex-end;
 	gap: 47px;

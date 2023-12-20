@@ -60,12 +60,43 @@
             grid-template-columns: repeat(1, 1fr);
         }
     }
+
+    &__presentbox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 15px;
+
+        @media(max-width: 992px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .service{
+            &__text{
+                display: block;
+            }
+            &__inner{
+                @media(min-width: 992px){
+                    &:hover{
+                        z-index: 1;
+                        width: 100%;
+                        .service__icon,
+                        .service__name{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .service{
     position: relative;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
+
+    
     
     &__inner{
         position: absolute;
