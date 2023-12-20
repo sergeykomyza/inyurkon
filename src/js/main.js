@@ -170,22 +170,23 @@ const fixedAnimation = ()=> {
 }
 
 // ================================================== 
-
-const scrollBoxHeight = document.querySelector('.team__items').scrollHeight
-gsap.to('.team__items',{
-    transform: `translateY(-${scrollBoxHeight}px)`,
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".line-title",
-        start: "0 200px",
-        end: `+=${scrollBoxHeight}`,
-        toggleActions: "restart none none reverse",
-        pin: ".team",
-        scrub: 1,
-        pinSpacing: false,
-        markers: true
-    }      
-})
+if(document.querySelector('.team__items')){
+    const scrollBoxHeight = document.querySelector('.team__items').scrollHeight
+    gsap.to('.team__items',{
+        transform: `translateY(-${scrollBoxHeight}px)`,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".line-title",
+            start: "0 200px",
+            end: `+=${scrollBoxHeight}`,
+            toggleActions: "restart none none reverse",
+            pin: ".team",
+            scrub: 1,
+            pinSpacing: false,
+            markers: true
+        }      
+    })
+}
 
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {
