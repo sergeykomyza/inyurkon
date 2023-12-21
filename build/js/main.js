@@ -171,23 +171,34 @@ const fixedAnimation = ()=> {
 
 // ================================================== 
 if(document.querySelector('.team__items')){
-    const scrollBoxHeight = document.querySelector('.team__items').scrollHeight
-    gsap.to('.team__items',{
-        transform: `translateY(-${scrollBoxHeight}px)`,
-        duration: 1,
-        scrollTrigger: {
-            trigger: ".line-title",
-            start: "0 200px",
-            end: `+=${scrollBoxHeight}`,
-            toggleActions: "restart none none reverse",
-            pin: ".team",
-            scrub: 1,
-            pinSpacing: false,
-            markers: true
-        }      
+    gsap.utils.toArray(".team__section").forEach((section, i) => {
+        const scrollBoxHeight = section.querySelector('.team__items').scrollHeight
+        const titleFixed = section.querySelector('.line-title')
+        gsap.to(section.querySelector('.team__items'),{
+            marginTop: `-${scrollBoxHeight}px`,
+            scrollTrigger: {
+                trigger: titleFixed,
+                start: "0 200px",
+                end: `+=${scrollBoxHeight}`,
+                toggleActions: "restart none none reverse",
+                pin: ".team",
+                scrub: 1,
+                pinSpacing: false,
+                markers: false
+            }      
+        })
     })
 }
 
+gsap.to('.team__titlebox', {
+    opacity: '0',
+    scrollTrigger: {
+        trigger: ".team-page .feedback",
+        start: "-45px 200px",
+        toggleActions: "restart none none reverse",
+        markers: false
+    }
+})
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {
     document.addEventListener('DOMContentLoaded', function () {
