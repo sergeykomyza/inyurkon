@@ -19,7 +19,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    padding-top: 130px;
+    padding-top: 25px;
     overflow: hidden;
   }
 
@@ -80,6 +80,9 @@
   width: 100%;
   text-align: center;
 
+  @media(max-width: 1500px){
+    max-width: 280px;
+  }
   @media(max-width: 992px){
     max-width: 100%;
   }
@@ -94,6 +97,9 @@
     transition: all .3s;
     &:hover{
       filter: grayscale(0);
+    }
+    @media(max-width: 1500px){
+      height: 300px;
     }
   }
 

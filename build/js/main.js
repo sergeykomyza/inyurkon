@@ -178,7 +178,7 @@ if(document.querySelector('.team__items')){
             marginTop: `-${scrollBoxHeight}px`,
             scrollTrigger: {
                 trigger: titleFixed,
-                start: "0 200px",
+                start: "0 100px",
                 end: `+=${scrollBoxHeight}`,
                 toggleActions: "restart none none reverse",
                 pin: ".team",
