@@ -68,12 +68,12 @@ const fancybox = ()=> {
 }
 
 // ================================================== МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-const inputMask = () => {
-    $(".js-maskPhone").inputmask({
-        mask: "+7 999 999 99 99",
-        clearIncomplete: true
-    });
-}
+// const inputMask = () => {
+//     $(".js-maskPhone").inputmask({
+//         mask: "+7 999 999 99 99",
+//         clearIncomplete: true
+//     });
+// }
 
 // ================================================== СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
@@ -201,54 +201,45 @@ gsap.to('.team__titlebox', {
 })
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 const map = ()=> {
-    document.addEventListener('DOMContentLoaded', function () {
-        setTimeout(function() {
-            var headID = document.getElementsByTagName("body")[0];         
-            var newScript = document.createElement('script');
-            newScript.type = 'text/javascript';
-            newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-            headID.appendChild(newScript);
-        }, 500);
-        setTimeout(function() {
-                var myMap = new ymaps.Map("map", {
-                center: [55.761147, 37.651259],
-                zoom: 16,
-                controls: ['smallMapDefaultSet']
-            }, {
-                searchControlProvider: 'yandex#search'
-            });
-    
-            myGeoObject = new ymaps.GeoObject({
-                geometry: {
-                    type: "Point"
-                },
-            });
-            myMap.geoObjects
-                .add(myGeoObject)
-                .add(new ymaps.Placemark([55.761112, 37.652292], {
-                    balloonContent: '<strong>101000, г. Москва, улица Покровка 40Б, подъезд 3</strong>',
-                    iconCaption: 'Покровка 40Б'
-                }, {
-                    preset: 'islands#blueCircleDotIconWithCaption',
-                    iconCaptionMaxWidth: '200'
-                }));
-    
-            myMap.setType('yandex#publicMap');
-    
-            myMap.behaviors.disable('scrollZoom');
-            //на мобильных устройствах... (проверяем по userAgent браузера)
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                //... отключаем перетаскивание карты
-                myMap.behaviors.disable('drag');
+
+    setTimeout(() => {
+        const script = document.createElement('script');
+
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+
+        script.onload = () => {
+            ymaps.ready(initMap);
+        };
+
+        document.body.appendChild(script);
+    }, 2000);
+
+    function initMap() {
+        const myMap = new ymaps.Map('map', {
+            center: [55.76118, 37.651259],
+            zoom: 15
+        });
+
+        const myPlacemark = new ymaps.Placemark(
+            [55.76118, 37.651259],
+            {
+                hintContent: 'Покровка 40Б',
+                balloonContent: '<strong>101000, г. Москва, улица Покровка 40Б, подъезд 3</strong>'
+            },
+            {
+                iconLayout: 'default#image',
             }
-        }, 1000);
-    });
+        );
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+
 }
 
 // ==================================================
 headerLogic()
 mMenuToggle()
-inputMask()
+// inputMask()
 if (document.querySelector('.services')) {
     tabs('.services-choose__buttons', '.services-choose__button', '.services-choose__content', 'active');
 }
